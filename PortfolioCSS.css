@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+@import url('https://fonts.googleapis.com/css?family=Charm');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+
+@keyframes slideIn {
+	0% {
+		transform: translate(40vw, 0vh);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(40vw, 15vh);
+		opacity: 1;
+	}
+}
+
+head
+{
+	font-size: 10vh;
+}
+
+body
+{
+	width: 100vw;
+	height: 100vh;
+	padding: 0px;
+	margin: 0px;
+}
+
+.link:link
+{
+	color: white;
+}
+
+.link:active
+{
+	color: white;
+}
+
+.link:visited
+{
+	color: white;
+}
+
+.intro
+{
+	font-size: 3.5vh;
+	width: 100%;
+	background-image: url("space.jpg");
+	background-size: cover;
+	margin: none;
+	height: 100%;
+}
+
+.intro_me
+{
+	animation: slideIn 2s ease forwards;
+	color: white;
+	font-family: Permanent Marker;
+}
+
+.up
+{
+	background-color: black;
+	font-family: Lobster;
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+
+.up:hover
+{
+	font-size: 5vh;
+}
+
+.h
+{
+	display: inline-block;
+	padding: 2vh;
+}
+
+.info
+{
+	width: 100vw;
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 15% 30% 30% 25%;
+}
+
+.about
+{
+	text-align: center;
+	margin-top: 5vh;
+	font-family: Dancing Script;
+	font-size: 6vh;
+	width: 100%;
+	grid-column: 1 / span 5;
+	grid-row: 1 / 2;
+}
+
+.image
+{
+	height: 25vh;
+	width: 20vh;
+	padding: none;
+	border: solid black 0.5vh;
+	margin: 6vh;
+	grid-column: 2 / span 2;
+	grid-row: 2 / span 2;
+	align-self: center;
+}
+
+.me
+{
+	text-align: start;
+	vertical-align: center;
+	grid-row: 3 / span 3;
+	grid-column: 4 / span 2;
+	font-size: 2.5vh;
+	font-family: Fjalla One;
+}
+
+.text_me
+{
+	text-align: center;
+	padding: 5vh;
+	font-size: 2vh;
+	grid-column: 1 / span 2;
+	grid-row: 4 / span 3;
+	align-self: center;
+	font-family: Yanone Kaffeesatz;
+}
+
+.contact
+{
+	background-color: black;
+	height: 30vh;
+	display: grid;
+	grid-template-rows: 5% 27.5% 27.5% 20% 20%;
+	grid-template-columns:  10% 32.5% 32.5% 25% ;
+	align-items: center;
+}
+
+.a
+{
+	color: grey;
+	font-family: Satisfy;
+	font-size: 4vh;
+	padding: 0.5vh;
+	grid-column: 2 / span 2;
+	grid-row: 2 / span 1;
+}
+
+.b
+{
+	font-size: 2vh;
+	color: grey;
+	font-family: Fjalla One;
+	grid-row: 3 / span 1;
+	grid-column: 2 / span 2;
+}
+
+.c
+{
+	font-size: 2vh;
+	color: grey;
+	font-family: Fjalla One;
+	grid-row: 4 / span 1;
+	grid-column: 2 / span 2;
+}
+
+.call
+{
+	height: 3vh;
+	width: 3vh;
+	background-image: url("phone.png");
+	background-repeat: no-repeat;
+	grid-row: 4 / span 1;
+	grid-column: -2 / span 1;
+}
+
+.mail
+{
+	height: 3vh;
+	width: 3vh;
+	background-image: url("mail.png");
+	background-repeat: no-repeat;
+	grid-row: 3 / span 1;
+	grid-column: -2 / span 1;
+}
+
+.email
+{
+	max-height: 2vh;
+	max-width: 2vh;
+}
+
+.phone
+{
+	max-height: 2vh;
+	max-width: 2vh;
+}
+
+.end
+{
+	font-family: Yanone Kaffeesatz;
+	color: white;
+	font-size: 1.75vh;
+	grid-row: 5 / span 1;
+	grid-column: 1 / span 5;
+	text-align: center;
+}
+
+.dark
+{
+	text-decoration: underline;
+	font-family: Charm;
+	font-size: 1.75vh;
+	text-align: center;
+}
+
+/* For mobile phones: */
+.info
+{
+	width: 100vw;
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+.about
+{
+	text-align: center;
+	margin-top: 5vh;
+	font-family: Dancing Script;
+	font-size: 6vh;
+	width: 100%;
+	grid-column: 2 / span 1;
+	grid-row: 1 / 2;
+}
+
+.image
+{
+	height: 25vh;
+	width: 20vh;
+	padding: none;
+	border: solid black 0.5vh;
+	margin: 6vh;
+	grid-column: 2 / span 1;
+	grid-row: 3 / 4;
+	align-self: center;
+}
+
+.me
+{
+
+	vertical-align: center;
+	grid-row: 7 / 8;
+	grid-column: 2 / span 1;
+	font-size: 2.5vh;
+	font-family: Fjalla One;
+}
+
+.text_me
+{
+	text-align: start;
+	padding: 5vh;
+	font-size: 2vh;
+	grid-column: 2 / span 1;
+	grid-row: 5 / 6;
+	align-self: center;
+	font-family: Yanone Kaffeesatz;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For desktop & tablet: */
+  body {width: 100vw;}
+  .intro {width: 100%;}
+  .up {width: 100%;}
+  .info
+{
+	width: 100vw;
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 15% 30% 30% 25%;
+}
+
+.about
+{
+	text-align: center;
+	margin-top: 5vh;
+	font-family: Dancing Script;
+	font-size: 6vh;
+	width: 100%;
+	grid-column: 1 / span 5;
+	grid-row: 1 / 2;
+}
+
+.image
+{
+	height: 25vh;
+	width: 20vh;
+	padding: none;
+	border: solid black 0.5vh;
+	margin: 6vh;
+	grid-column: 2 / span 2;
+	grid-row: 2 / span 2;
+	align-self: center;
+}
+
+.me
+{
+	text-align: start;
+	vertical-align: center;
+	grid-row: 3 / span 3;
+	grid-column: 4 / span 2;
+	font-size: 2.5vh;
+	font-family: Fjalla One;
+}
+
+.text_me
+{
+	text-align: center;
+	padding: 5vh;
+	font-size: 2vh;
+	grid-column: 1 / span 2;
+	grid-row: 4 / span 3;
+	align-self: center;
+	font-family: Yanone Kaffeesatz;
+}
+  .call {width: 3vh;}
+  .mail {width: 3vh;}
+  .email {max-width: 2vh;}
+  .phone {max-width: 2vh;}
+}
