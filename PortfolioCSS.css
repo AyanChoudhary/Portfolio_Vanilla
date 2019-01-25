@@ -66,6 +66,7 @@ body
 	font-size: 3.5vw;
 	color: white;
 	text-align: center;
+	z-index: 5;
 	font-family: Permanent Marker;
 }
 
@@ -76,7 +77,9 @@ body
 	width: 100%;
 	color: white;
 	text-align: center;
-	transition-timing-function: ease;
+	position: fixed;
+	z-index: 10;
+	transition-timing-function: linear;
 	transition-duration: 1.5s;
 }
 
@@ -373,7 +376,7 @@ body
 		opacity: 0;
 	}
 	100% {
-		transform: translate(0%, 10vh);
+		transform: translate(0%, 20vh);
 		opacity: 1;
 	}
 }
@@ -433,7 +436,7 @@ body
 	width: 100%;
 	color: white;
 	text-align: center;
-	transition-timing-function: ease;
+	transition-timing-function: linear;
 	transition-duration: 1.5s;
 }
 
@@ -603,7 +606,7 @@ body
 		opacity: 0;
 	}
 	100% {
-		transform: translate(0%, 10vh);
+		transform: translate(0%, 20vh);
 		opacity: 1;
 	}
 }
@@ -665,6 +668,8 @@ body
 	text-align: center;
 	transition-timing-function: ease;
 	transition-duration: 1.5s;
+	position: fixed;
+	z-index: 10;
 }
 
 .up:hover
@@ -694,6 +699,7 @@ body
 	font-family: Dancing Script;
 	font-size: 5vh;
 	width: 100%;
+	z-index: 5;
 	grid-column: 1 / span 5;
 	grid-row: 1 / 2;
 }
