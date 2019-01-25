@@ -174,8 +174,8 @@ body
 
 .call
 {
-	height: 3vh;
-	width: 3vh;
+	height: 3.5vh;
+	width: 3.5vh;
 	background-image: url("phone.png");
 	background-repeat: no-repeat;
 	grid-row: 4 / span 1;
@@ -184,8 +184,8 @@ body
 
 .mail
 {
-	height: 3vh;
-	width: 3vh;
+	height: 3.5vh;
+	width: 3.5vh;
 	background-image: url("mail.png");
 	background-repeat: no-repeat;
 	grid-row: 3 / span 1;
@@ -194,14 +194,14 @@ body
 
 .email
 {
-	max-height: 2vh;
-	max-width: 2vh;
+	max-height: 3.5vh;
+	max-width: 3.5vh;
 }
 
 .phone
 {
-	max-height: 2vh;
-	max-width: 2vh;
+	max-height: 3.5vh;
+	max-width: 3.5vh;
 }
 
 .end
@@ -222,6 +222,7 @@ body
 	text-align: center;
 }
 
+@media (max-device-width: 599px;) {
 /* For mobile phones: */
 .info
 {
@@ -274,8 +275,9 @@ body
 	align-self: center;
 	font-family: Yanone Kaffeesatz;
 }
+}
 
-@media only screen and (min-width: 600px) {
+@media (min-device-width: 600px) {
   /* For desktop & tablet: */
   body {width: 100vw;}
   .intro {width: 100%;}
