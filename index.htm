@@ -2,7 +2,8 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title> Ayan's Portfolio </title>
-	<link rel="stylesheet" type="text/css" href="PortfolioCSS.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="index.js"></script>
 </head>
 <body>
 <div class="container">
@@ -10,13 +11,18 @@
 	<div class="intro">
 
 		<div class="up">
-			<a class="link" href="#about"> <div class="h">Ayan's Portfolio </div> </a>
+			<div class="h" onclick="openclose()">Ayan's Portfolio </div>
+			<div class="topnav" id="topnav">
+			 <div class="nav_portf"> <a href="" class="nav"> My Portfolio </a> </div> 
+			 <div class="nav_projects"> <a href="" class="nav"> Projects </a> </div> 
+		</div>
 		</div>
 
 		<div class="intro_me">	
 			Hey There!
 			I am Ayan.
 		</div>
+
 	</div> 
 
 
@@ -24,7 +30,7 @@
 	<div class="info">
 
 		<div class="about" id="about">
-			About Me
+			A little about me
 		</div>
 
 		<img class="image" src="Ayan.jpeg">
@@ -34,7 +40,6 @@
 		Currently a developer at SDSLabs.
 		And a member of The Debating Society.
 		I am a coding enthusiast who likes to learn while developing.
-		Development is a great task and that's why I love it.
 	</div>
 
 	<div class="me">
