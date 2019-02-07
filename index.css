@@ -211,6 +211,7 @@ body
 	grid-template-rows: 5% 27.5% 27.5% 20% 20%;
 	grid-template-columns:  10% 32.5% 32.5% 25% ;
 	align-items: center;
+	overflow-y: hidden;
 }
 
 .a

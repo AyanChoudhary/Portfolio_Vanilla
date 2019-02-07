@@ -13,3 +13,18 @@ function openclose()
 		x++;
 	}
 }
+
+function closenav()
+{
+	if (x%2 != 0) 
+	{
+		document.getElementById('topnav').style.height = "0vh";
+		x++;
+	}
+
+	else
+	{
+		document.getElementById('topnav').style.height = "15vh";
+		x++; 
+	}
+}
