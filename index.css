@@ -534,6 +534,11 @@ body
 	height: 100%;
 }
 
+.landing
+{
+
+}
+
 .intro_me
 {
 	animation: slideIn 2s ease forwards;
@@ -769,7 +774,7 @@ body
 	transition-duration: 0.5s;
 	transition-timing-function: ease;
 	display: grid;
-	grid-template-columns: 15vw 70vw 15vw;
+	grid-template-columns: 45vw 10vw 45vw;
 	grid-template-rows: auto;
 	text-align: center;
 	align-items: center;
@@ -812,6 +817,30 @@ body
 	color: white;
 }
 
+.left1
+{
+	grid-row: 1 / span 1;
+	grid-column: 1 / span 1;
+}
+
+.left2
+{
+	grid-row: 2 / span 1;
+	grid-column: 1 / span 1;
+}
+
+.right1
+{
+	grid-row: 1 / span 1;
+	grid-column: 3 / span 1;
+}
+
+.right2
+{
+	grid-row: 2 / span 1;
+	grid-column: 3 / span 1;
+}
+
 .intro
 {
 	font-size: 3vh;
@@ -838,6 +867,7 @@ body
 	font-family: Lobster;
 	width: 100%;
 	color: white;
+	font-size: 3vh;
 	text-align: center;
 	transition-timing-function: ease;
 	transition-duration: 1.5s;
@@ -855,6 +885,11 @@ body
 {
 	display: inline-block;
 	padding: 2vh;
+}
+
+.meinfo
+{
+	display: none;
 }
 
 .info
@@ -908,6 +943,19 @@ body
 	grid-row: 4 / span 3;
 	align-self: center;
 	font-family: Yanone Kaffeesatz;
+}
+
+.project
+{
+	display: none;
+}
+
+.myprojects
+{
+	font-family: Satisfy;
+	text-align: center;
+	margin: 5vh;
+	font-size: 5vh;
 }
 
 .contact

@@ -21,10 +21,4 @@ function closenav()
 		document.getElementById('topnav').style.height = "0vh";
 		x++;
 	}
-
-	else
-	{
-		document.getElementById('topnav').style.height = "15vh";
-		x++; 
-	}
 }
