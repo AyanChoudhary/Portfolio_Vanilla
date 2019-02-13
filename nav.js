@@ -11,7 +11,6 @@ function switch_Home(url)
           document.getElementById("portf").style.fontWeight = "bold";
           document.getElementById("about").style.fontWeight = "normal";
           document.getElementById("proj").style.fontWeight = "normal";
-          document.getElementById("contact").style.height = 0;
           document.getElementById("canvas").style.visibility = "visible";
           document.getElementById("chart").style.display = "none";
           openclose();
@@ -34,7 +33,7 @@ function switch_About_Me(url)
           document.getElementById("portf").style.fontWeight = "normal";
           document.getElementById("proj").style.fontWeight = "normal";
           document.getElementById("canvas").style.visibility = "hidden";
-          document.getElementById("chart").style.display = "flex";
+          document.getElementById("chart").style.display = "block";
           openclose();
           history.pushState(data, null, "about_me.html");
         }
@@ -78,7 +77,7 @@ window.addEventListener('popstate', function(e){
       }
 
     else if (data.includes("index.html")) {
-          switch_Home("index.html");
+          switch_Home("home.html");
           openclose();
           document.getElementById("chart").style.display = "none";
     }
