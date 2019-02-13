@@ -14,7 +14,7 @@
 		opacity: 0;
 	}
 	100% {
-		transform: translate(0%, 20vh);
+		transform: translate(0%, 10vh);
 		opacity: 1;
 	}
 }
@@ -22,6 +22,16 @@
 head
 {
 	font-size: 10vh;
+}
+
+#canvas
+{
+	position: absolute;
+	top: 0vh;
+	left: 0vh;
+	background-color: transparent;
+	width: 100vw;
+	height: 100vh;
 }
 
 body
@@ -72,10 +82,17 @@ body
 {
 	grid-column: 2 / span 1;
 	grid-row: 1 / span 1;
+	font-weight: bold;
 
 }
 
 .nav_projects
+{
+	grid-row: 3 / span 1;
+	grid-column: 2 / span 1;
+}
+
+.nav_about
 {
 	grid-row: 2 / span 1;
 	grid-column: 2 / span 1;
@@ -102,6 +119,7 @@ body
 .nav:hover
 {
 	color: white;
+	cursor: pointer;
 }
 
 .intro
@@ -114,6 +132,18 @@ body
 	margin: none;
 	height: 100%;
 	overflow-x: hidden;
+}
+
+.arrow
+{
+	height: 10vw;
+	width: 5vw;
+}
+
+.click
+{
+	font-family: Satisfy;
+	padding-bottom: 5vw;
 }
 
 .intro_me
@@ -134,13 +164,8 @@ body
 	color: white;
 	text-align: center;
 	position: fixed;
+	top: 0px;
 	z-index: 10;
-}
-
-.up:hover
-{
-
-	font-size: 5vh;
 }
 
 .h
@@ -150,165 +175,134 @@ body
 }
 
 .contact
-{
-	background-color: black;
-	height: 30vh;
-	display: grid;
-	grid-template-rows: 5% 27.5% 27.5% 20% 20%;
-	grid-template-columns:  10% 32.5% 32.5% 25% ;
-	align-items: center;
-	overflow-y: hidden;
-}
+	{
+		background-color: black;
+		height: 30vh;
+		display: grid;
+		grid-template-rows: 1% 25% 25% 20% 15% 14%;
+		grid-template-columns:  25% 11.1% 11.1% 11.1% 33.3%;
+		align-items: center;
+		overflow-y: hidden;
+	}
 
-.a
-{
-	color: grey;
-	font-family: Satisfy;
-	font-size: 4vh;
-	padding: 0.5vh;
-	grid-column: 2 / span 2;
-	grid-row: 2 / span 1;
-}
+	.a
+	{
+		color: grey;
+		font-family: "Satisfy";
+		font-size: 3vh;
+		padding: 0.5vh;
+		grid-column: 2 / span 3;
+		grid-row: 2 / span 1;
+		justify-self:center;
+	}
 
-.b
-{
-	font-size: 2vh;
-	color: grey;
-	font-family: Fjalla One;
-	grid-row: 3 / span 1;
-	grid-column: 2 / span 2;
-}
+	.b
+	{
+		font-size: 2vh;
+		color: grey;
+		font-family: "Fjalla One";
+		grid-row: 3 / span 1;
+		grid-column: 2 / span 3;
+	}
 
-.c
-{
-	font-size: 2vh;
-	color: grey;
-	font-family: Fjalla One;
-	grid-row: 4 / span 1;
-	grid-column: 2 / span 2;
-}
+	.c
+	{
+		font-size: 2vh;
+		color: grey;
+		font-family: "Fjalla One";
+		grid-row: 4 / span 1;
+		grid-column: 2 / span 3;
+	}
 
-.call
-{
-	height: 3.5vh;
-	width: 3.5vh;
-	background-image: url("phone.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	grid-row: 4 / span 1;
-	grid-column: 1 / span 1;
-	justify-self: end;
-}
+	.call
+	{
+		height: 3.5vh;
+		width: 3.5vh;
+		background-image: url("phone.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		grid-row: 4 / span 1;
+		grid-column: 1 / span 1;
+		justify-self: end;
+	}
 
-.mail
-{
-	height: 3.5vh;
-	width: 3.5vh;
-	background-image: url("mail.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	grid-row: 3 / span 1;
-	grid-column: 1 / span 1;
-	justify-self: end;
-}
+	.mail
+	{
+		height: 3.5vh;
+		width: 3.5vh;
+		background-image: url("mail.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		grid-row: 3 / span 1;
+		grid-column: 1 / span 1;
+		justify-self: end;
+	}
 
-.email
-{
-	max-height: 3.5vh;
-	max-width: 3.5vh;
-}
+	.fb
+	{
+		height: 3.5vh;
+		width: 3.5vh;
+		background-image: url("fb.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		grid-row: 5 / span 1;
+		grid-column: 2 / span 1;
+		justify-self: end;
+	}
 
-.phone
-{
-	max-height: 3.5vh;
-	max-width: 3.5vh;
-}
+	.linkedin
+	{
+		height: 3.5vh;
+		width: 3.5vh;
+		background-image: url("linkedin.jpg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		grid-row: 5 / span 1;
+		grid-column: 3 / span 1;
+		justify-self: end;
+	}
 
-.end
-{
-	font-family: Yanone Kaffeesatz;
-	color: white;
-	font-size: 2vh;
-	grid-row: 5 / span 1;
-	grid-column: 1 / span 5;
-	text-align: center;
-	justify-self:center;
-}
+	.git
+	{
+		height: 3.5vh;
+		width: 3.5vh;
+		background-image: url("github-white.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		grid-row: 5 / span 1;
+		grid-column: 4 / span 1;
+		justify-self: end;
+	}
 
-.dark
-{
-	text-decoration: underline;
-	font-family: Charm;
-	font-size: 2vh;
-	text-align: center;
-}
+	.phone
+	{
+		max-height: 3.5vh;
+		max-width: 3.5vh;
+	}
+
+	.end
+	{
+		font-family: "Yanone Kaffeesatz";
+		color: white;
+		font-size: 2vh;
+		grid-row: 6 / span 1;
+		grid-column: 1 / span 5;
+		text-align: center;
+		justify-self:center;
+	}
+
+	.dark
+	{
+		text-decoration: underline;
+		font-family: "Charm";
+		font-size: 2vh;
+		text-align: center;
+	}
+
 
 body
 {
 	overflow-x: hidden;
-}
-
-.contact
-{
-	background-color: black;
-	height: 30vh;
-	display: grid;
-	grid-template-rows: 5% 27.5% 27.5% 20% 20%;
-	grid-template-columns:  25% 33.3% 33.3%;
-	align-items: center;
-}
-
-.a
-{
-	color: grey;
-	font-family: Satisfy;
-	font-size: 3vh;
-	padding: 0.5vh;
-	grid-column: 2 / span 1;
-	grid-row: 2 / span 1;
-	justify-self:center;
-}
-
-.b
-{
-	font-size: 2vh;
-	color: grey;
-	font-family: Fjalla One;
-	grid-row: 3 / span 1;
-	grid-column: 2 / span 1;
-}
-
-.c
-{
-	font-size: 2vh;
-	color: grey;
-	font-family: Fjalla One;
-	grid-row: 4 / span 1;
-	grid-column: 2 / span 1;
-}
-
-.call
-{
-	height: 3.5vh;
-	width: 3.5vh;
-	background-image: url("phone.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	grid-row: 4 / span 1;
-	grid-column: 1 / span 1;
-	justify-self: end;
-}
-
-.mail
-{
-	height: 3.5vh;
-	width: 3.5vh;
-	background-image: url("mail.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	grid-row: 3 / span 1;
-	grid-column: 1 / span 1;
-	justify-self: end;
 }
 
 
@@ -321,7 +315,7 @@ body
 		opacity: 0;
 	}
 	100% {
-		transform: translate(0%, 20vh);
+		transform: translate(0%, 10vh);
 		opacity: 1;
 	}
 }
@@ -355,6 +349,16 @@ body
 	color: white;
 }
 
+#canvas
+{
+	position: absolute;
+	top: 0vh;
+	left: 0vh;
+	width: 100vw;
+	height: 100vh;
+	background-color: transparent; 
+}
+
 .topnav
 {
 	width: 100vw;
@@ -382,6 +386,12 @@ body
 }
 
 .nav_projects
+{
+	grid-row: 3 / span 1;
+	grid-column: 2 / span 1;
+}
+
+.nav_about
 {
 	grid-row: 2 / span 1;
 	grid-column: 2 / span 1;
@@ -418,6 +428,18 @@ body
 	background-size: cover;
 	margin: none;
 	height: 100%;
+}
+
+.arrow
+{
+	height: 10vw;
+	width: 5vw;
+}
+
+.click
+{
+	font-family: Satisfy;
+	padding-bottom: 5vw;
 }
 
 .intro_me
@@ -453,98 +475,135 @@ body
 }
 
 .contact
-{
-	background-color: black;
-	height: 30vh;
-	display: grid;
-	grid-template-rows: 5% 27.5% 27.5% 20% 20%;
-	grid-template-columns:  10% 32.5% 32.5% 25% ;
-	align-items: center;
-	overflow-y: hidden;
-}
+	{
+		background-color: black;
+		height: 30vh;
+		display: grid;
+		grid-template-rows: 5% 27.5% 27.5% 20% 20%;
+		grid-template-columns:  10% 32.5% 32.5% 25% ;
+		align-items: center;
+		overflow-y: hidden;
+	}
 
-.a
-{
-	color: grey;
-	font-family: Satisfy;
-	font-size: 4vh;
-	padding: 0.5vh;
-	grid-column: 2 / span 2;
-	grid-row: 2 / span 1;
-}
+	.a
+	{
+		color: grey;
+		font-family: Satisfy;
+		font-size: 3.5vh;
+		padding: 0.5vh;
+		grid-column: 2 / span 2;
+		grid-row: 2 / span 1;
+		justify-self: start;
+	}
 
-.b
-{
-	font-size: 2vh;
-	color: grey;
-	font-family: Fjalla One;
-	grid-row: 3 / span 1;
-	grid-column: 2 / span 2;
-}
+	.b
+	{
+		font-size: 1.75vh;
+		color: grey;
+		font-family: Fjalla One;
+		grid-row: 3 / span 1;
+		grid-column: 2 / span 2;
+	}
 
-.c
-{
-	font-size: 2vh;
-	color: grey;
-	font-family: Fjalla One;
-	grid-row: 4 / span 1;
-	grid-column: 2 / span 2;
-}
+	.c
+	{
+		font-size: 1.75vh;
+		color: grey;
+		font-family: Fjalla One;
+		grid-row: 4 / span 1;
+		grid-column: 2 / span 2;
+	}
 
-.call
-{
-	height: 3.5vh;
-	width: 3.5vh;
-	background-image: url("phone.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	grid-row: 4 / span 1;
-	grid-column: 1 / span 1;
-	justify-self: end;
-}
+	.call
+	{
+		height: 3.5vh;
+		width: 3.5vh;
+		background-image: url("phone.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		grid-row: 4 / span 1;
+		grid-column: 1 / span 1;
+		justify-self: end;
+	}
 
-.mail
-{
-	height: 3.5vh;
-	width: 3.5vh;
-	background-image: url("mail.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	grid-row: 3 / span 1;
-	grid-column: 1 / span 1;
-	justify-self: end;
-}
+	.mail
+	{
+		height: 3.5vh;
+		width: 3.5vh;
+		background-image: url("mail.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		grid-row: 3 / span 1;
+		grid-column: 1 / span 1;
+		justify-self: end;
+	}
 
-.email
-{
-	max-height: 3.5vh;
-	max-width: 3.5vh;
-}
+	.fb
+	{
+		height: 3.5vh;
+		width: 3.5vh;
+		background-image: url("fb.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		grid-row: 4 / span 1;
+		grid-column: 4 / span 1;
+		justify-self: end;
+	}
 
-.phone
-{
-	max-height: 3.5vh;
-	max-width: 3.5vh;
-}
+	.linkedin
+	{
+		height: 3.5vh;
+		width: 3.5vh;
+		background-image: url("linkedin.jpg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		grid-row: 4 / span 1;
+		grid-column: 5 / span 1;
+		justify-self: end;
+	}
 
-.end
-{
-	font-family: Yanone Kaffeesatz;
-	color: white;
-	font-size: 1.75vh;
-	grid-row: 5 / span 1;
-	grid-column: 1 / span 5;
-	text-align: center;
-	justify-self:center;
-}
+	.git
+	{
+		height: 3.5vh;
+		width: 3.5vh;
+		background-image: url("github-white.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		grid-row: 4 / span 1;
+		grid-column: 6 / span 1;
+		justify-self: end;
+	}
 
-.dark
-{
-	text-decoration: underline;
-	font-family: Charm;
-	font-size: 1.75vh;
-	text-align: center;
-}
+	.email
+	{
+		max-height: 3.5vh;
+		max-width: 3.5vh;
+	}
+
+	.phone
+	{
+		max-height: 3.5vh;
+		max-width: 3.5vh;
+	}
+
+	.end
+	{
+		font-family: Yanone Kaffeesatz;
+		color: white;
+		font-size: 2vh;
+		grid-row: 5 / span 1;
+		grid-column: 1 / span 5;
+		text-align: center;
+		justify-self:center;
+	}
+
+	.dark
+	{
+		text-decoration: underline;
+		font-family: Charm;
+		font-size: 2vh;
+		text-align: center;
+	}	
 }
 
 @media all and (min-width: 720px) {
@@ -556,7 +615,7 @@ body
 		opacity: 0;
 	}
 	100% {
-		transform: translate(0%, 20vh);
+		transform: translate(0%, 10vh);
 		opacity: 1;
 	}
 }
@@ -573,6 +632,16 @@ body
 	padding: 0px;
 	margin: 0px;
 	overflow-x: hidden;
+}
+
+#canvas
+{
+	position: absolute;
+	top: 0vh;
+	left: 0vh;
+	width: 100vw;
+	height: 100vh;
+	background-color: transparent; 
 }
 
 .link:link
@@ -618,13 +687,13 @@ body
 
 .nav_projects
 {
-	grid-row: 2 / span 1;
+	grid-row: 3 / span 1;
 	grid-column: 2 / span 1;
 }
 
 .nav_about
 {
-	grid-row: 3 / span 1;
+	grid-row: 2 / span 1;
 	grid-column: 2 / span 1;
 }
 
@@ -649,6 +718,7 @@ body
 .nav:hover
 {
 	color: white;
+	cursor: pointer;
 }
 
 .left1
@@ -695,6 +765,18 @@ body
 	font-family: Permanent Marker;
 }
 
+.arrow
+{
+	height: 10vw;
+	width: 5vw;
+}
+
+.click
+{
+	font-family: Satisfy;
+	padding-bottom: 5vw;
+}
+
 .up
 {
 	background-color: black;
@@ -720,4 +802,140 @@ body
 	display: inline-block;
 	padding: 2vh;
 }
+
+.h:hover
+{
+	cursor: pointer;
+}
+
+.contact
+	{
+		background-color: black;
+		height: 30vh;
+		display: grid;
+		grid-template-rows: 5% 27.5% 27.5% 20% 20%;
+		grid-template-columns:  10% 32.5% 25% 7.5% 7.5% 7.5% 10% ;
+		align-items: center;
+		overflow-y: hidden;
+	}
+
+	.a
+	{
+		color: grey;
+		font-family: Satisfy;
+		font-size: 3.5vh;
+		padding: 0.5vh;
+		grid-column: 2 / span 2;
+		grid-row: 2 / span 1;
+		justify-self: start;
+	}
+
+	.b
+	{
+		font-size: 1.75vh;
+		color: grey;
+		font-family: Fjalla One;
+		grid-row: 3 / span 1;
+		grid-column: 2 / span 2;
+	}
+
+	.c
+	{
+		font-size: 1.75vh;
+		color: grey;
+		font-family: Fjalla One;
+		grid-row: 4 / span 1;
+		grid-column: 2 / span 2;
+	}
+
+	.call
+	{
+		height: 3.5vh;
+		width: 3.5vh;
+		background-image: url("phone.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		grid-row: 4 / span 1;
+		grid-column: 1 / span 1;
+		justify-self: end;
+	}
+
+	.mail
+	{
+		height: 3.5vh;
+		width: 3.5vh;
+		background-image: url("mail.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		grid-row: 3 / span 1;
+		grid-column: 1 / span 1;
+		justify-self: end;
+	}
+
+	.email
+	{
+		max-height: 3.5vh;
+		max-width: 3.5vh;
+	}
+
+	.fb
+	{
+		height: 3.5vh;
+		width: 3.5vh;
+		background-image: url("fb.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		grid-row: 4 / span 1;
+		grid-column: 4 / span 1;
+		justify-self: end;
+	}
+
+	.linkedin
+	{
+		height: 3.5vh;
+		width: 3.5vh;
+		background-image: url("linkedin.jpg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		grid-row: 4 / span 1;
+		grid-column: 5 / span 1;
+		justify-self: end;
+	}
+
+	.git
+	{
+		height: 3.5vh;
+		width: 3.5vh;
+		background-image: url("github-white.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		grid-row: 4 / span 1;
+		grid-column: 6 / span 1;
+		justify-self: end;
+	}
+
+	.phone
+	{
+		max-height: 3.5vh;
+		max-width: 3.5vh;
+	}
+
+	.end
+	{
+		font-family: Yanone Kaffeesatz;
+		color: white;
+		font-size: 2vh;
+		grid-row: 5 / span 1;
+		grid-column: 1 / span 7;
+		text-align: center;
+		justify-self:center;
+	}
+
+	.dark
+	{
+		text-decoration: underline;
+		font-family: Charm;
+		font-size: 2vh;
+		text-align: center;
+	}	
 }

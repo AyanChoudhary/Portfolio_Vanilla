@@ -23,31 +23,6 @@ function closenav()
 	}
 }
 
-let path = "./"
-
-function switch_About_Me(url)
-{
-	let xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (this.readystate === 4 && this.status === 200) {
-			document.getElementById("parent").innerHTML = this.responseText;
-			document.getElementById("portf").style.fontWeight = "900";
-		}
-	};
-	
-	xhttp.open("GET", url, true);
-	xhttp.send(null);
-}
-
-function switch_Projects(url)
-{
-	let xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (this.readystate === 4 && this.status === 200) {
-			document.getElementById("parent").innerHTML = this.responseText;
-			document.getElementById("proj").style.fontWeight = "900";
-		}
-	};
-	xhttp.open("GET", url, true);
-	xhttp.send(null);
-}
+$('.h').live('click', function(){
+	openclose();
+});
