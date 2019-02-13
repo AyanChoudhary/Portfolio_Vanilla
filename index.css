@@ -6,6 +6,10 @@
 @import url('https://fonts.googleapis.com/css?family=Charm');
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 
+html, body {
+	width: 100%;
+}
+
 /* For mobile phones: */
 
 @keyframes slideIn {
@@ -176,8 +180,8 @@ body
 
 #chart
 {
-	height: 20vh;
-	width: 98vw;
+	height: 60vh;
+	width: 100%;
 	margin: auto;
 	display: none;
 	overflow-x: hidden;
@@ -486,7 +490,7 @@ body
 #chart
 {
 	height: 45vh;
-	width: 100vw;
+	width: 100%;
 	margin: auto;
 	display: none;
 }
@@ -797,7 +801,7 @@ body
 #chart
 {
 	height: 45vh;
-	width: 100vw;
+	width: 100%;
 	margin: auto;
 	display: none;
 }

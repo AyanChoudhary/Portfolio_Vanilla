@@ -1,8 +1,11 @@
+var chart;
 window.onload = function() 
 {
 
-let chart = new CanvasJS.Chart("chart", {
+
+chart = new CanvasJS.Chart("chart", {
 	animationEnabled: true,
+	width: window.innerWidth,
 	title:{
 		text: "Programming Languages Known",
 		horizontalAlign: "center"
@@ -24,6 +27,6 @@ let chart = new CanvasJS.Chart("chart", {
 		]
 	}]
 });
+// setTimeout(_ => chart.render(), 3000)
 chart.render();
-
 }
