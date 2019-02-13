@@ -1,11 +1,11 @@
-function makeChart() 
+window.onload = function() 
 {
 
-let chart = new CanvasJS.Chart("me", {
+let chart = new CanvasJS.Chart("chart", {
 	animationEnabled: true,
 	title:{
 		text: "Programming Languages Known",
-		horizontalAlign: "left"
+		horizontalAlign: "center"
 	},
 	data: [{
 		type: "doughnut",

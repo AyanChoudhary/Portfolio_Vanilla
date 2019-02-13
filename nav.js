@@ -13,6 +13,7 @@ function switch_Home(url)
           document.getElementById("proj").style.fontWeight = "normal";
           document.getElementById("contact").style.height = 0;
           document.getElementById("canvas").style.visibility = "visible";
+          document.getElementById("chart").style.display = "none";
           openclose();
           history.pushState(data, null, "index.html");
         }
@@ -33,6 +34,7 @@ function switch_About_Me(url)
           document.getElementById("portf").style.fontWeight = "normal";
           document.getElementById("proj").style.fontWeight = "normal";
           document.getElementById("canvas").style.visibility = "hidden";
+          document.getElementById("chart").style.display = "block";
           openclose();
           history.pushState(data, null, "about_me.html");
         }
@@ -53,6 +55,7 @@ function switch_Projects(url)
           document.getElementById("portf").style.fontWeight = "normal";
           document.getElementById("about").style.fontWeight = "normal";
           document.getElementById("canvas").style.visibility = "hidden";
+          document.getElementById("chart").style.display = "none";
           openclose();
           history.pushState(data, null, "projects.html");
         }
@@ -64,14 +67,20 @@ function switch_Projects(url)
 window.addEventListener('popstate', function(e){
     if (data.includes("about_me.html")) {
           switch_About_Me("about_me.html");
+          openclose();
+          document.getElementById("chart").style.display = "none";
       }
 
     else if (data.includes("projects.html")) {
           switch_Projects("projects.html");
+          openclose();
+          document.getElementById("chart").style.display = "block";
       }
 
     else if (data.includes("index.html")) {
           switch_Home("index.html");
+          openclose();
+          document.getElementById("chart").style.display = "none";
     }
 
     else {
